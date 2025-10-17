@@ -1,0 +1,51 @@
+extends layout
+
+block styles
+  link(rel="stylesheet", href="/css/login.css")
+
+block content
+  .form-card
+    h2 Login
+    form#loginForm(method='POST', novalidate)
+      input.form-input(type='text', name='emailOrPhone', placeholder='Email or Phone Number')
+      input.form-input(type='password', name='password', placeholder='Password')
+      button.form-btn(type='submit') LOGIN
+    .link-row
+      span Don't have an account? 
+      a(href='/signup') Signup
+
+  //- JS for submit validation
+  script.
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('loginForm');
+      const emailInput = form.querySelector('input[name="emailOrPhone"]');
+      const passwordInput = form.querySelector('input[name="password"]');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let allValid = true;
+
+        // Email validation (simple regex)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput.value.trim() === '' || !emailRegex.test(emailInput.value.trim())) {
+          emailInput.classList.remove('valid');
+          emailInput.classList.add('invalid');
+          allValid = false;
+        } else {
+          emailInput.classList.remove('invalid');
+          emailInput.classList.add('valid');
+        }
+
+        // Password validation (non-empty)
+        if (passwordInput.value.trim() === '') {
+          passwordInput.classList.remove('valid');
+          passwordInput.classList.add('invalid');
+          allValid = false;
+        } else {
+          passwordInput.classList.remove('invalid');
+          passwordInput.classList.add('valid');
+        }
+
+        if (allValid) form.submit();
+      });
+    });

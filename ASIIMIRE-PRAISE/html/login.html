@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="/public/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-box" id="loginBox">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="email" placeholder="Email or Phone Number" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="login-btn">LOGIN</button>
+                <div class="signup-link">
+                    Don't have an account? - <a href="#" id="signupLink">Signup</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <h2>Congratulations!</h2>
+            <p>You have successfully signed into the Refactory system. Feel at home</p>
+        </div>
+    </div>
+
+    <script src="/public/js/login.js"></script>
+</body>
+
+</html>

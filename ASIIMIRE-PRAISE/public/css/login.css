@@ -1,0 +1,91 @@
+/* login.css */
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:#f3f4f6;
+}
+
+/* Card container */
+/*  */
+
+/* Heading */
+.form-card h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Input fields */
+.form-input {
+  border: 2px solid lightgreen; /* default on refresh */
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-input.invalid {
+  border-color: #dc3545; /* red for invalid */
+  /* background-color: #ffe6e6; */
+}
+
+.form-input.valid {
+  border-color: #28a745; /* green for valid */
+  /* background-color: #e6ffea; */
+}
+/* Submit button */
+.form-btn {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #5ccdd0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-btn:hover {
+  background-color: #5f2f5d;
+}
+
+/* Link row */
+.link-row {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.link-row a {
+  color: #4A90E2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-row a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-card {
+    padding: 30px 20px;
+  }
+}

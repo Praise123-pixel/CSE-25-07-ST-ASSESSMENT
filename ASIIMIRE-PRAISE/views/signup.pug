@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Signup
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    .container
+      .form-box
+        .header
+          h2 Signup
+        
+        // Success Message (Green Banner)
+        if success
+          .message-banner.success-banner
+            span Account created successfully! - 
+            a(href='/login') Login
+            span.close-btn X
+        
+        // General Error Message (Optional, for field errors)
+        if error && !success
+          .message-banner.error-banner
+            span #{error}
+            span.close-btn X
+
+        form(method='POST', action='/signup')
+          .input-group
+            input(
+              type='text', 
+              name='fullName', 
+              placeholder='Full Name', 
+              value=formData.fullName || '',
+              class=(errors && errors.fullName ? 'input-error' : '')
+            )
+           
+            label Full Name
+            if errors && errors.fullName
+              .error-text #{errors.fullName}
+
+          .input-group
+            input(
+              type='email', 
+              name='email', 
+              placeholder='', 
+              value=formData.email || '',
+              class=(errors && errors.email ? 'input-error' : '')
+            )
+            label Email
+            if errors && errors.email
+              .error-text #{errors.email}
+
+          .input-group
+            input(
+              type='tel', 
+              name='phone', 
+              placeholder='+256 712 345678', 
+              value=formData.phone || '',
+              class=(errors && errors.phone ? 'input-error' : '')
+            )
+            label Phone Number
+            if errors && errors.phone
+              .error-text #{errors.phone}
+
+          .input-group
+            input(
+              type='password', 
+              name='password', 
+              placeholder='••••••••••',
+              class=(errors && errors.password ? 'input-error' : '')
+            )
+            label Password
+            if errors && errors.password
+              .error-text #{errors.password}
+
+          .input-group
+            input(
+              type='password', 
+              name='confirmPassword', 
+              placeholder='••••••••••',
+              class=(errors && errors.confirmPassword ? 'input-error' : '')
+            )
+            label Confirm Password
+            if errors && errors.confirmPassword
+              .error-text #{errors.confirmPassword}
+              
+          button.btn.btn-signup(type='submit') SIGNUP
+
+          .footer-link
+            span Have an account? - 
+            a(href='/login') Login     signup.pug

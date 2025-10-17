@@ -1,0 +1,166 @@
+body {
+    font-family: sans-serif;
+    background-color: #f7f7f7; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f3f4f6 grey;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Constrain width */
+}
+
+.form-box {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* Match box behind 'Login'/'Signup' */
+    display: inline-block;
+    border-radius: 4px;
+}
+
+/* Input Group and Styling */
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #555;
+    background-color: white;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+    /* Default border color: Green for Signup, Teal for Login (based on filled form) */
+    border-color: #38c172; 
+}
+
+/* Specific styling for the initial login page (white border, red error) */
+.input-group input[type="text"]:not(:placeholder-shown),
+.input-group input[type="email"]:not(:placeholder-shown),
+.input-group input[type="tel"]:not(:placeholder-shown) {
+    border-color: #38c172; /* Green border when filled */
+}
+
+/* Highlight border on focus */
+.input-group input:focus {
+    border-color: #3490dc; /* Blue/Teal on focus */
+}
+
+/* Error (Validation) Styling - Red Border */
+.input-group .input-error {
+    border-color: #e3342f !important; /* Red border */
+}
+
+.error-text {
+    color: #e3342f;
+    font-size: 12px;
+    margin-top: 5px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+/* Teal/Turquoise Button (Used in Signup and final Login image) */
+.btn-teal {
+    background-color: #4dc0b5; /* Teal/Turquoise color */
+    color: white;
+}
+.btn-teal:hover {
+    background-color: #38a89d;
+}
+
+/* Purple Button (From one of the Login images) - Keep optional */
+.btn-purple {
+    background-color: #653488; /* Purple color */
+    color: white;
+}
+.btn-purple:hover {
+    background-color: #512b6f;
+}
+
+/* Footer Link */
+.footer-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-link a {
+    color: #4dc0b5; /* Teal link color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Message Banners (Success/Error) */
+.message-banner {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.success-banner {
+    background-color: #38c172; /* Green */
+}
+
+.error-banner {
+    background-color: #e3342f; /* Red */
+}
+
+.close-btn {
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 10px;
+}
