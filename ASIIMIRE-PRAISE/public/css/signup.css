@@ -1,0 +1,102 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6;
+  padding: 20px;
+  background-color: #f3f4f6;
+}
+
+/* Card container */
+.form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Heading */
+.form-card h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Input fields */
+.form-input {
+  border: 2px solid  #5ccdd0;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: border-color 0.3s, background-color 0.3s;
+  font-size: 14px;
+}
+
+.form-input.invalid {
+  border-color: #dc3545;
+}
+
+.form-input.valid {
+  border-color:  #5ccdd0;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+/* Submit button */
+.form-btn {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #5ccdd0;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-btn:hover {
+  background-color: #5f2f5d;
+}
+
+/* Link row */
+.link-row {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.link-row a {
+  color: #4A90E2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-row a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-card {
+    padding: 30px 20px;
+  }
+}

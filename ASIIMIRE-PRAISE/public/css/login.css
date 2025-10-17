@@ -24,13 +24,13 @@ body {
 .form-card h2 {
   margin-bottom: 30px;
   font-size: 1.8rem;
-  color: #333;
+  color:  #5ccdd0;
   text-align: center;
 }
 
 /* Input fields */
 .form-input {
-  border: 2px solid lightgreen; /* default on refresh */
+  border: 2px solid  #5ccdd0; /* default on refresh */
   padding: 10px;
   border-radius: 5px;
   width: 100%;
@@ -69,7 +69,7 @@ body {
 .link-row {
   margin-top: 20px;
   font-size: 0.9rem;
-  color: #555;
+  color:  #5ccdd0;
   text-align: center;
 }
 
